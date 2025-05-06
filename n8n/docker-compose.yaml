@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: n8n
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+  n8n:
+    image: docker.n8n.io/n8nio/n8n
+    ports:
+      - "5678:5678"
+    environment:
+      - GENERIC_TIMEZONE="Europe/Moscow"
+      - TZ="Europe/Moscow"
+    volumes:
+      - n8n-data:/home/node/.n8n
+      - n8n-files:/files
+
+volumes:
+  postgres-data:
+    driver: local
+  n8n-data:
+    driver: local
+  n8n-files:
+    driver: local
