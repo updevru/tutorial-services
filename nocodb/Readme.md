@@ -2,7 +2,7 @@
 
 [Сайт](http://www.nocodb.com/) • [Github](https://github.com/nocodb/nocodb) • [Документация](https://docs.nocodb.com/)
 
-Open-source аналог Airtable с более простым, но с интересным функционалом.
+Open-source аналог Airtable с более простым, и интересным функционалом.
 
 ### Плюсы
 
